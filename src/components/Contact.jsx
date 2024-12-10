@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Git } from "../assets/Git";
 import { Linkedin } from "../assets/Linkedin";
+import Twitter from "../assets/twitter.gif";
 
 const Contact = () => {
   const form = useRef();
@@ -101,7 +102,7 @@ const Contact = () => {
                 <Linkedin />
               </a>
               <a href="https://twitter.com/nishunishank" className="w-12 h-12">
-                <img src="../src/assets/twitter.gif" alt="Twitter" />
+                <img src={Twitter} alt="Twitter" />
               </a>
             </div>
           </div>
