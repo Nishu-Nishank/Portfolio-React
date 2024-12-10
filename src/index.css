@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flip:hover {
+  transform: rotateY(360deg);
+}
+
+.animate {
+  animation-name: slidee;
+  animation-duration: 2s;
+}
+
+@keyframes slidee {
+  from {
+    width: 50vw;
+    opacity: 0;
+  }
+  to {
+    width: 100vw;
+    opacity: 1;
+  }
+}
