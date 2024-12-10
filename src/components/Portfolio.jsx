@@ -1,4 +1,8 @@
 import React from "react";
+import Github from "../assets/git.svg";
+import Linkedin from "../assets/linkedin.svg";
+import NishuImg from "../assets/nishu.png";
+import Twitter from "../assets/twitter.gif";
 
 const Portfolio = () => {
   return (
@@ -6,7 +10,7 @@ const Portfolio = () => {
       <div className="flex justify-center items-center md:pt-0 pt-5">
         <img
           className="w-[250px] h-[300px] rounded-2xl"
-          src="../src/assets/nishu.png"
+          src={NishuImg}
           alt="Nishu Nishank"
         />
       </div>
@@ -40,19 +44,19 @@ const Portfolio = () => {
                   href="https://github.com/Nishu-Nishank"
                   className="w-12 h-12 flip duration-500"
                 >
-                  <img src="../src/assets/git.svg" alt="Github" />
+                  <img src={Github} alt="Github" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/nishu-nishank/"
                   className="w-[44px] h-[44px] flip duration-500"
                 >
-                  <img src="../src/assets/linkedin.svg" alt="LinkedIn" />
+                  <img src={Linkedin} alt="LinkedIn" />
                 </a>
                 <a
                   href="https://twitter.com/nishunishank"
                   className="w-12 h-12 flip duration-500"
                 >
-                  <img src="../src/assets/twitter.gif" alt="Twitter" />
+                  <img src={Twitter} alt="Twitter" />
                 </a>
               </div>
             </div>
