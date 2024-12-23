@@ -147,7 +147,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="bg-[#f2f2f2] py-10 text-center text-[#286dab]">
-        <p>© 2023 Developed by Nishu Nishank</p>
+        <p>© 2024 Developed by Nishu Nishank</p>
       </div>
     </div>
   );

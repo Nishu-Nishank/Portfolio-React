@@ -21,27 +21,36 @@ const Experience = () => {
             <li className="py-1">
               Collaborated with Product Managers to maintain alignment with
               project plans and timelines, ensuring consistent tracking and
-              adherence to the overall schedule. <br />
-              Coordinated with Backend Development Teams to clarify and address
-              backend dependencies, facilitating a seamless integration process
-              across both front-end and back-end elements of the project.
-              <br />
-              Worked Closely with QA (Quality Assurance) teams to test newly
-              developed pages and modules, promptly addressing issues to
-              maintain high-quality standards and minimize development
-              bottlenecks.
+              adherence to the overall schedule.
+              <li className="py-1">
+                Coordinated with Backend Development Teams to clarify and
+                address backend dependencies, facilitating a seamless
+                integration process across both front-end and back-end elements
+                of the project.
+              </li>
+              <li className="py-1">
+                Worked Closely with QA (Quality Assurance) teams to test newly
+                developed pages and modules, promptly addressing issues to
+                maintain high-quality standards and minimize development
+                bottlenecks.
+              </li>
             </li>
             <li className="py-1">
               Developed and integrated plenty of modules including map modules
-              for real-time vehicle tracking and historical playback, enabling
-              users to monitor vehicle movements directly on a map interface.
-              <br /> Implemented alert tracking for sudden braking, acceleration
-              events, and other critical notifications, enhancing driver safety
-              insights with detailed fuel, speed, date & time stamps.
-              <br /> Enhanced user experience with features for viewing live
-              vehicle locations and replaying historical routes, providing
-              comprehensive fleet management tools for monitoring and analyzing
-              vehicle behavior over time.
+              for real-time vehicle tracking and historical playback of vehicle
+              trips, enabling users to monitor vehicle movements directly on a
+              map interface.
+              <li className="py-1">
+                Implemented alert tracking for sudden braking, acceleration
+                events, and other critical notifications, enhancing driver
+                safety insights with detailed fuel, speed, date & time stamps.
+              </li>
+              <li className="py-1">
+                Enhanced user experience with features for viewing live vehicle
+                locations and replaying historical routes, providing
+                comprehensive fleet management tools for monitoring and
+                analyzing vehicle behavior over time.
+              </li>
             </li>
             <li className="py-1 font-semibold">
               Tech Stack:- HTML5, CSS3, TypeScript, React Js , Redux toolkit
@@ -58,7 +67,7 @@ const Experience = () => {
           <p className="text-xl font-bold">
             Member Of Technical Staff - 2 (Blowhorn)
           </p>
-          <p className="italic text-teal-500 ">03/2022 - Present,</p>
+          <p className="italic text-teal-500 ">03/2022 - 10/2023,</p>
           <p className="italic text-teal-500">Achievements/Tasks</p>
           <ul style={{ listStyleType: "disc" }} className="text-lg">
             <li className="py-1">
@@ -85,8 +94,9 @@ const Experience = () => {
               debit amount along with multiple details.
             </li>
             <li className="py-1 font-semibold">
-              Tech Stack:- HTML5, CSS3, Javascript, Vue Js , Nuxt js, Tailwind
-              css, PrimeVue.
+              Tech Stack:- HTML5, CSS3, JavaScript, TypeScript, React Js,
+              Material UI, Redux toolkit, Vue Js , Nuxt js, Tailwind css,
+              PrimeVue.
             </li>
           </ul>
         </div>
@@ -128,7 +138,7 @@ const Experience = () => {
               satisfaction.
             </li>
             <li className="py-1 font-semibold">
-              Tech Stack:- Tech Stack:- HTML5, CSS3, Javascript, ReactJs,
+              Tech Stack:- Tech Stack:- HTML5, CSS3, JavaScript, ReactJs,
               KnockoutJs, Material UI
             </li>
           </ul>

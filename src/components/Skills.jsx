@@ -18,18 +18,18 @@ const Skills = () => {
   const skillLists = [
     { name: "Html5", url: htmlSvg },
     { name: "CSS3", url: cssSvg },
+    { name: "Tailwind CSS", url: tailwindSvg },
     { name: "JavaScript", url: javascriptSvg },
     { name: "TypeScript", url: typeScript },
     { name: "React", url: reactSvg },
-    { name: "Redux", url: reduxSvg },
     { name: "Next Js", url: next },
+    { name: "Redux", url: reduxSvg },
     { name: "VueJs", url: vueSvg },
     { name: "NuxtJs", url: nuxtSvg },
-    { name: "Tailwind CSS", url: tailwindSvg },
     { name: "Prime Vue", url: primeVueSvg },
-    { name: "Knockout Js", url: knockoutJsSvg },
     { name: "Material Ui", url: materialUi },
     { name: "Bootstrap", url: bootstrapSvg },
+    { name: "Knockout Js", url: knockoutJsSvg },
   ];
 
   return (
