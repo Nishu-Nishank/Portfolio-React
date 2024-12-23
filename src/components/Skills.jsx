@@ -16,7 +16,7 @@ import vueSvg from "../assets/skills/vue.svg";
 
 const Skills = () => {
   const skillLists = [
-    { name: "Html5", url: htmlSvg },
+    { name: "HTML5", url: htmlSvg },
     { name: "CSS3", url: cssSvg },
     { name: "Tailwind CSS", url: tailwindSvg },
     { name: "JavaScript", url: javascriptSvg },
