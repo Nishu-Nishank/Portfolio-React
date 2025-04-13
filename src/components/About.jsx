@@ -9,7 +9,7 @@ const About = () => {
           Experienced{" "}
           <b className="text-[#337ab7] italic">Senior Frontend developer</b>{" "}
           with
-          <b> 5.10 years </b> of expertise in crafting visually appealing,
+          <b> 6.2 years </b> of expertise in crafting visually appealing,
           user-friendly websites and web applications. Proficient in HTML, CSS,
           JavaScript and TypeScript, I have a strong track record of
           transforming design concepts into seamless interfaces. Skilled in
