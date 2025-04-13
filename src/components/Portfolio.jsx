@@ -29,7 +29,7 @@ const Portfolio = () => {
             <div className="mt-4">
               <button className="bg-[#286dab] text-sm flex items-center justify-center px-4 py-1 text-white rounded-md hover:scale-110 duration-300 mx-auto md:mx-0">
                 <a
-                  href="https://drive.google.com/file/d/1gppj2G6pi0VDxOkMVFuhNLj1PWShsPGR/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1_wlG_Ka2tkuR-9BGxcuJkKdELnpdIRFW/view?usp=drive_link"
                   type="application/pdf"
                   rel="alternate"
                   media="print"
