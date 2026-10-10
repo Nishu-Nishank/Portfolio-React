@@ -14,140 +14,203 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_vtiadkj", // Replace with your EmailJS Service ID
-        "template_09agjrh", // Replace with your EmailJS Template ID
+        "service_vtiadkj",
+        "template_09agjrh",
         form.current,
-        "LUBKBKA1LBJIJUAMI" // Replace with your EmailJS Public Key
+        "LUBKBKA1LBJIJUAMI"
       )
       .then(
         (result) => {
-          toast.success("Message sent successfully!", {
+          toast.success("Message sent successfully! 🎉", {
             position: "bottom-center",
             autoClose: 3000,
           });
-          //alert("Message Sent Successfully!");
           console.log(result.text);
         },
         (error) => {
-          alert("Failed to Send Message, Try Again.");
+          toast.error("Failed to send message. Please try again.", {
+            position: "bottom-center",
+            autoClose: 3000,
+          });
           console.log(error.text);
         }
       );
 
-    e.target.reset(); // Optional: reset the form after submission
+    e.target.reset();
   };
 
+  const contactMethods = [
+    {
+      icon: "📧",
+      label: "Email",
+      value: "nishank.nishu85@gmail.com",
+      href: "mailto:nishank.nishu85@gmail.com",
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      icon: "📱",
+      label: "Phone",
+      value: "+91 9738912315",
+      href: "tel:+919738912315",
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      icon: "📍",
+      label: "Location",
+      value: "Bengaluru, Karnataka",
+      color: "from-green-500 to-teal-500",
+    },
+  ];
+
   return (
-    <div id="contact">
+    <div id="contact" className="bg-gradient-to-b from-white to-gray-50">
       <ToastContainer />
-      <p className="text-3xl text-center pb-5 mt-20 font-bold">Contact</p>
-      <div className="md:py-16 py-8 md:flex justify-evenly items-center px-6">
-        <div>
-          <p className="text-[#b37d4e] text-3xl font-black">Have an idea?</p>
-          <p className="text-[#286dab] text-xl font-bold pt-2">
-            Let's Connect!!
-          </p>
-          <div className="pt-8 space-y-4">
-            <div className="flex space-x-2 items-center">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth="0"
-                viewBox="0 0 24 24"
-                className="About_icon__1B8FN h-5 w-5 bg-[#f2f2f2]"
-                height="1.3em"
-                width="1.3em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M23,20 L23,6 L12,15 L1,6 L1,20 L23,20 Z M12,12 L22,4 L2,4 L12,12 Z"
-                ></path>
-              </svg>
-              <a
-                className="text-[#b37d4e]"
-                href="mailto:nishank.nishu85@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                nishank.nishu85@gmail.com
-              </a>
+      <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+        <h2 className="text-4xl md:text-5xl text-center pb-4 font-bold bg-gradient-to-r from-[#1e5a96] to-[#42A5F5] bg-clip-text text-transparent mb-2">
+          Get In Touch
+        </h2>
+        <p className="text-center text-gray-600 mb-16 text-lg">
+          Have an exciting opportunity or just want to chat? I'd love to hear from you!
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-2xl font-bold text-[#1e5a96] mb-8">Let's Connect</h3>
+
+            {/* Contact Methods */}
+            <div className="space-y-4 mb-8">
+              {contactMethods.map((method, index) => (
+                <a
+                  key={index}
+                  href={method.href || "#"}
+                  target={method.href && method.href.startsWith("tel:") ? undefined : "_blank"}
+                  rel="noopener noreferrer"
+                  className="group block p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`text-3xl`}>{method.icon}</div>
+                    <div>
+                      <p className="text-sm text-gray-500 font-semibold">{method.label}</p>
+                      <p className="text-[#1e5a96] font-bold group-hover:text-[#42A5F5] transition-colors">
+                        {method.value}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              ))}
             </div>
-            <div className="flex space-x-2 items-center">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth="0"
-                viewBox="0 0 448 512"
-                className="About_icon__1B8FN"
-                height="1.3em"
-                width="1.3em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
-              </svg>
-              <p className="text-[#b37d4e]">+91 9738912315</p>
-            </div>
-            <div className="flex space-x-2 mt-4">
-              <a
-                href="https://github.com/Nishu-Nishank"
-                className="w-12 h-12 flip duration-500"
-              >
-                <Git />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/nishu-nishank/"
-                className="w-12 h-12 flip duration-500"
-              >
-                <Linkedin />
-              </a>
-              <a href="https://twitter.com/nishunishank" className="w-12 h-12">
-                <img src={Twitter} alt="Twitter" />
-              </a>
+
+            {/* Social Links */}
+            <div className="bg-gradient-to-r from-[#1e5a96]/10 to-[#42A5F5]/10 rounded-xl p-6">
+              <p className="text-sm font-semibold text-gray-700 mb-4">Follow me on social media</p>
+              <div className="flex gap-4">
+                <a
+                  href="https://github.com/Nishu-Nishank"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-2 border-gray-200 group-hover:border-[#42A5F5]"
+                  title="GitHub"
+                >
+                  <Git className="w-6 h-6 group-hover:text-[#42A5F5] transition-colors" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/nishu-nishank/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-2 border-gray-200 group-hover:border-[#42A5F5]"
+                  title="LinkedIn"
+                >
+                  <Linkedin className="w-6 h-6 group-hover:text-[#42A5F5] transition-colors" />
+                </a>
+                <a
+                  href="https://twitter.com/nishunishank"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-2 border-gray-200 group-hover:border-[#42A5F5]"
+                  title="Twitter"
+                >
+                  <img src={Twitter} alt="Twitter" className="w-6 h-6" />
+                </a>
+              </div>
             </div>
           </div>
+
+          {/* Contact Form */}
+          <div>
+            <form ref={form} onSubmit={sendEmail} className="space-y-4">
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  name="from_name"
+                  className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:border-[#42A5F5] focus:outline-none focus:ring-2 focus:ring-[#42A5F5]/20 transition-all duration-300"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  name="from_email"
+                  className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:border-[#42A5F5] focus:outline-none focus:ring-2 focus:ring-[#42A5F5]/20 transition-all duration-300"
+                  placeholder="john@example.com"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  rows="6"
+                  className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg focus:border-[#42A5F5] focus:outline-none focus:ring-2 focus:ring-[#42A5F5]/20 transition-all duration-300 resize-none"
+                  placeholder="Tell me about your project or opportunity..."
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full px-6 py-3 bg-gradient-to-r from-[#1e5a96] to-[#42A5F5] text-white font-bold rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                Send Message ✉️
+              </button>
+            </form>
+          </div>
         </div>
-        <div>
-          <form ref={form} onSubmit={sendEmail}>
-            <div className="pt-4">Name</div>
-            <div>
-              <input
-                type="text"
-                name="from_name"
-                className="bg-[#f2f2f2] border md:w-[320px] w-[280px] h-9 mt-1 rounded-md"
-                required
-              />
-            </div>
-            <div className="pt-4">Email</div>
-            <div>
-              <input
-                type="email"
-                name="from_email"
-                className="bg-[#f2f2f2] border md:w-[320px] w-[280px] h-9 mt-1 rounded-md"
-                required
-              />
-            </div>
-            <div className="pt-4">Message</div>
-            <div>
-              <textarea
-                name="message"
-                cols="36"
-                rows="5"
-                className="bg-[#f2f2f2] border mt-1 rounded-md md:w-[320px] w-[280px]"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="bg-[#286dab] px-6 py-1 text-center text-white rounded-lg mt-2"
-            >
-              Send
-            </button>
-          </form>
+
+        {/* CTA Banner */}
+        <div className="bg-gradient-to-r from-[#1e5a96] to-[#42A5F5] rounded-2xl p-8 text-white text-center mb-12">
+          <h3 className="text-2xl font-bold mb-2">Ready to work together?</h3>
+          <p className="mb-4 text-white/90">
+            Let's create something amazing. Feel free to reach out anytime!
+          </p>
+          <a
+            href="mailto:nishank.nishu85@gmail.com"
+            className="inline-block px-6 py-2 bg-white text-[#1e5a96] font-bold rounded-lg hover:shadow-lg transition-all duration-300"
+          >
+            Start Conversation
+          </a>
         </div>
-      </div>
-      <div className="bg-[#f2f2f2] py-10 text-center text-[#286dab]">
-        <p>© 2024 Developed by Nishu Nishank</p>
+
+        {/* Footer */}
+        <div className="border-t border-gray-200 pt-8 text-center">
+          <p className="text-gray-600 font-medium">
+            © 2026 Nishu Nishank. All rights reserved.
+          </p>
+          <p className="text-gray-500 text-sm mt-2">
+            Built with <span className="text-red-500">❤️</span> using React, Tailwind CSS & modern web technologies
+          </p>
+        </div>
       </div>
     </div>
   );

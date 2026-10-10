@@ -1,72 +1,107 @@
 import React from "react";
 
 const About = () => {
+  const contactInfo = [
+    {
+      icon: "📍",
+      label: "Location",
+      value: "Bengaluru, Karnataka",
+      color: "text-[#FF6B6B]",
+    },
+    {
+      icon: "✉️",
+      label: "Email",
+      value: "nishank.nishu85@gmail.com",
+      href: "mailto:nishank.nishu85@gmail.com",
+      color: "text-[#4ECDC4]",
+    },
+    {
+      icon: "📱",
+      label: "Phone",
+      value: "+91 9738912315",
+      color: "text-[#45B7D1]",
+    },
+  ];
+
   return (
-    <div id="about" className="bg-[#f2f2f2] md:py-16 py-8">
-      <p className="text-3xl text-center pb-5 font-bold">About</p>
-      <div className="flex justify-center space-y-4">
-        <p className="lg:px-32 md:px-16 px-8 text-lg text-center">
-          Experienced{" "}
-          <b className="text-[#337ab7] italic">Senior Frontend developer</b>{" "}
-          with
-          <b> 6.2 years </b> of expertise in crafting visually appealing,
-          user-friendly websites and web applications. Proficient in HTML, CSS,
-          JavaScript and TypeScript, I have a strong track record of
-          transforming design concepts into seamless interfaces. Skilled in
-          frontend frameworks like React and Vue.js, strong problem-solving
-          abilities, collaborative mindset, and dedication to delivering
-          high-quality frontend solutions. Ready to contribute to your team's
-          success and exceed expectations.
-        </p>
-      </div>
-      <div className="md:flex justify-center space-x-8 md:pt-8 pt-4 space-y-1 md:space-y-0">
-        <div className="flex space-x-2 items-center pl-8 md:pl-0">
-          <img
-            src="../src/assets/location.gif"
-            alt="location"
-            className="h-5 w-5"
-          />
-          <p className="text-[#b37d4e]">Bengaluru, Karnataka</p>
+    <div id="about" className="bg-gradient-to-b from-[#f8f9fa] to-[#f2f2f2] md:py-16 py-8">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl md:text-5xl text-center pb-8 font-bold bg-gradient-to-r from-[#1e5a96] to-[#42A5F5] bg-clip-text text-transparent">
+          About Me
+        </h2>
+
+        <div className="flex justify-center mb-12">
+          <div className="lg:px-0 md:px-8 px-4 text-lg text-center leading-relaxed max-w-3xl">
+            <p className="mb-4">
+              I'm a <span className="font-bold text-[#1e5a96]">Lead Frontend Engineer</span> with <span className="font-bold text-[#42A5F5]">7+ years</span> of proven expertise building enterprise-grade web applications across supply chain, automotive, logistics, and banking. Specialized in designing scalable UI architecture, building data-rich dashboards, and delivering high-quality solutions.
+            </p>
+            <p className="mb-4">
+              My expertise spans <span className="font-semibold">React, Vue 3, TypeScript, Next.js, and modern web technologies</span>. I excel at leading end-to-end frontend delivery, optimizing performance, collaborating across teams, and architecting maintainable micro-frontend platforms. Hands-on with automated testing, CI/CD pipelines, AWS deployment, and k6 load testing for scalability validation.
+            </p>
+            <p>
+              Committed to writing clean, maintainable code and creating exceptional user experiences. Experienced in developing enterprise-grade, modular Supply Chain Management (SCM) platforms. Always eager to learn and adapt to emerging technologies while mentoring junior developers.
+            </p>
+          </div>
         </div>
-        <div className="flex space-x-2 items-center">
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            strokeWidth="0"
-            viewBox="0 0 24 24"
-            className="h-5 w-5 bg-[#f2f2f2]"
-            height="1.3em"
-            width="1.3em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M23,20 L23,6 L12,15 L1,6 L1,20 L23,20 Z M12,12 L22,4 L2,4 L12,12 Z"
-            ></path>
-          </svg>
-          <a
-            className="text-[#b37d4e]"
-            href="mailto:nishank.nishu85@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            nishank.nishu85@gmail.com
-          </a>
+
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mb-12">
+          {contactInfo.map((info, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 cursor-pointer"
+            >
+              <div className={`text-4xl mb-3 group-hover:scale-125 transition-transform duration-300`}>
+                {info.icon}
+              </div>
+              <p className="text-sm text-gray-500 mb-1">{info.label}</p>
+              {info.href ? (
+                <a
+                  href={info.href}
+                  className={`font-semibold text-gray-800 hover:${info.color} transition-colors truncate`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {info.value}
+                </a>
+              ) : (
+                <p className="font-semibold text-gray-800">{info.value}</p>
+              )}
+            </div>
+          ))}
         </div>
-        <div className="flex space-x-2 items-center">
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            strokeWidth="0"
-            viewBox="0 0 448 512"
-            className="h-5 w-5"
-            height="1.3em"
-            width="1.3em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
-          </svg>
-          <p className="text-[#b37d4e]">+91 9738912315</p>
+
+        <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-[#42A5F5]">
+          <h3 className="text-xl font-bold text-[#1e5a96] mb-4">🎯 What I Bring</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="flex items-start space-x-3">
+              <span className="text-2xl">🏗️</span>
+              <div>
+                <p className="font-semibold text-gray-800">Scalable Architecture</p>
+                <p className="text-sm text-gray-600">Micro-frontend design and enterprise-grade platform solutions</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-2xl">⚡</span>
+              <div>
+                <p className="font-semibold text-gray-800">Performance Excellence</p>
+                <p className="text-sm text-gray-600">Load testing, optimization, and scalability validation with k6</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-2xl">🤝</span>
+              <div>
+                <p className="font-semibold text-gray-800">Leadership & Collaboration</p>
+                <p className="text-sm text-gray-600">Leading cross-functional teams and mentoring junior developers</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-2xl">🧪</span>
+              <div>
+                <p className="font-semibold text-gray-800">Quality & Testing</p>
+                <p className="text-sm text-gray-600">Automated testing, CI/CD pipelines, and code quality standards</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
